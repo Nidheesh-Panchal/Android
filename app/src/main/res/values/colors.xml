@@ -11,4 +11,5 @@
     <color name="blue">#3498db</color>
     <color name="purple">#9b59b6</color>
     <color name="spinner_text">#FFFFFF</color>
+    <color name="dark_back">#3d3d3d</color>
 </resources>

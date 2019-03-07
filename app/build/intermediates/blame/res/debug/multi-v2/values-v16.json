@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v16\\values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\590a732574e1dae1a4f16517a424fdea\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\27f2f15d931ab0f0cf229d392faa7132\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\ef84b8d2cfe7e4190b5e4cf0b228a7a1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
