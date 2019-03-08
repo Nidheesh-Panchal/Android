@@ -397,6 +397,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_back
 color dim_foreground_disabled_material_dark
 color dim_foreground_disabled_material_light
 color dim_foreground_material_dark
@@ -672,6 +673,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable icon
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -688,6 +690,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
 id CTRL
+id ConstraintLayout
 id FUNCTION
 id META
 id SHIFT
@@ -745,6 +748,7 @@ id dimensions
 id direct
 id disableHome
 id edit_query
+id email_text
 id end
 id end_padder
 id expand_activities_button
@@ -762,6 +766,7 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id imageView
 id info
 id invisible
 id italic
@@ -771,6 +776,7 @@ id line1
 id line3
 id listMode
 id list_item
+id login_button
 id media_actions
 id message
 id middle
@@ -784,10 +790,12 @@ id notification_main_column_container
 id packed
 id parent
 id parentPanel
+id password_text
 id percent
 id progress_circular
 id progress_horizontal
 id radio
+id register_button
 id right
 id right_icon
 id right_side
@@ -828,6 +836,10 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView3
+id textView4
+id textView5
+id textView6
 id time
 id title
 id titleDividerNoCustom
@@ -946,15 +958,20 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+string email
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
+string login
+string pass
 string project_id
+string register
 string search_menu_title
 string status_bar_notification_info_overflow
+string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
