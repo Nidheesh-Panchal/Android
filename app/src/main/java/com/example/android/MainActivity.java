@@ -59,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
 		register_button.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				//Intent intent=new Intent(this,com.android.flashchatnewfirebase.RegisterActivity.class);
+				Intent intent=new Intent(MainActivity.this, register.class);
+				finish();
+				startActivity(intent);
 			}
 		});
 	}
