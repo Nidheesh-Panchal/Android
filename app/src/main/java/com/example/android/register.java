@@ -36,7 +36,7 @@ public class register extends AppCompatActivity {
 		setContentView(R.layout.activity_register);
 
 		email=findViewById(R.id.email_text);
-		pass=findViewById(R.id.password_text);
+		pass=findViewById(R.id.pass_text);
 		retypepass=findViewById(R.id.repass_text);
 		register=findViewById(R.id.register_button);
 		username=findViewById(R.id.username_text);
@@ -44,9 +44,10 @@ public class register extends AppCompatActivity {
 		retypepass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 			@Override
 			public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
-				Log.d("connectapp",""+i);
-				if(i==6)
+				Log.d("connectapp","editorlistener "+i);
+				if(i!=0)
 				{
+					Log.d("connectapp","editorlistener condition satisfied "+i);
 					registration();
 					return true;
 				}
@@ -66,10 +67,14 @@ public class register extends AppCompatActivity {
 	}
 
 	private void registration() {
+		Log.d("connectapp","inside registration");
+
+		String user=username.getText().toString();
 		String mail=email.getText().toString();
 		String password=pass.getText().toString();
 		String repass=retypepass.getText().toString();
-		String user=username.getText().toString();
+
+		Log.d("connectapp","inside registration " + user);
 
 		boolean flag=false;
 		View focusView = null;
@@ -81,7 +86,7 @@ public class register extends AppCompatActivity {
 			focusView=username;
 		}
 
-		else if(mail.isEmpty() || mail.contains("@"))
+		else if(mail.isEmpty() || !mail.contains("@"))
 		{
 			email.setError("Enter Valid E-Mail");
 			flag=true;
@@ -105,6 +110,7 @@ public class register extends AppCompatActivity {
 		}
 		else
 		{
+			Log.d("connectapp","Registering");
 			createUser();
 		}
 	}
@@ -122,7 +128,7 @@ public class register extends AppCompatActivity {
 				if(task.isSuccessful())
 				{
 					//Putting data into firebase.
-					//Toast.makeText(this,"Registration Successful.",Toast.LENGTH_SHORT).show();
+					Toast.makeText(register.this,"Registration Successful.",Toast.LENGTH_SHORT).show();
 					String user=username.getText().toString();
 					SharedPreferences prefs = getSharedPreferences("chatPrefs", 0);
 					prefs.edit().putString("username", user).apply();

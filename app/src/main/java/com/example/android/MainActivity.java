@@ -1,6 +1,9 @@
 package com.example.android;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +15,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -39,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
 				Log.d("connectapp",""+i);
-				if (i==6)
+				if (i!=0)
 				{
 					Log.d("connectapp","Inside password action listener");
 					attemptLogin();
@@ -73,14 +79,46 @@ public class MainActivity extends AppCompatActivity {
 		Log.d("connectapp","Inside attemptLogin");
 		if(mail.isEmpty())
 		{
-			if(mail.equals("") || password.equals(""))
-			{
-				Log.d("connectapp","Nothing entered");
-				return;
-			}
+			Toast.makeText(this,"Enter valid E-Mail!",Toast.LENGTH_SHORT).show();
+			return;
+		}
+		if(password.isEmpty())
+		{
+			Toast.makeText(this,"Enter valid password!",Toast.LENGTH_SHORT).show();
+			return;
 		}
 
 		Toast.makeText(this,"Login in Progress!",Toast.LENGTH_SHORT).show();
+		mAuth.signInWithEmailAndPassword(mail,password).addOnCompleteListener(this,
+				new OnCompleteListener<AuthResult>() {
+					@Override
+					public void onComplete(@NonNull Task<AuthResult> task) {
+						Log.d("connectapp", "Signing in status :" + task.isSuccessful());
+
+						if (!task.isSuccessful())
+						{
+							Log.d("FlashChat", "Problem signing in: " + task.getException());
+							showErrorDialog("There was a problem signing in. \nTry Again!\nWrong email or password. OR\nCheck your internet connection");
+						}
+						else
+						{
+							Log.d("connectapp","logged in");
+							/*Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+							finish();
+							startActivity(intent);*/
+						}
+					}
+				});
+	}
+
+	private void showErrorDialog(String message) {
+
+		new AlertDialog.Builder(this)
+				.setTitle("Oops")
+				.setMessage(message)
+				.setPositiveButton(android.R.string.ok, null)
+				.setIcon(android.R.drawable.ic_dialog_alert)
+				.show();
 	}
 
 }
