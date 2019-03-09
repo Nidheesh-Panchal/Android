@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View view) {
 				Intent intent=new Intent(MainActivity.this, register.class);
-				finish();
+				//finish();
 				startActivity(intent);
 			}
 		});
@@ -103,9 +103,9 @@ public class MainActivity extends AppCompatActivity {
 						else
 						{
 							Log.d("connectapp","logged in");
-							/*Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+							Intent intent = new Intent(MainActivity.this, ChatActivity.class);
 							finish();
-							startActivity(intent);*/
+							startActivity(intent);
 						}
 					}
 				});

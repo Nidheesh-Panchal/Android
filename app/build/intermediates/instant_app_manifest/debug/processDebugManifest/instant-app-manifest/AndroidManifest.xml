@@ -26,8 +26,13 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.android.register" />
-        <activity android:name="com.example.android.MainActivity" >
+        <activity android:name="com.example.android.ChatActivity" />
+        <activity
+            android:name="com.example.android.register"
+            android:theme="@style/FrontPage" />
+        <activity
+            android:name="com.example.android.MainActivity"
+            android:theme="@style/FrontPage" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
