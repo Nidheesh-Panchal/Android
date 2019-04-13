@@ -1728,6 +1728,10 @@
         "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\color\\abc_background_cache_hint_selector_material_dark.xml"
     },
     {
+        "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chatmessage.xml.flat",
+        "source": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\activity_chatmessage.xml"
+    },
+    {
         "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xhdpi-v17_abc_ic_menu_cut_mtrl_alpha.png.flat",
         "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\drawable-ldrtl-xhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
