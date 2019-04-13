@@ -823,6 +823,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable green_circle
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon
@@ -876,6 +877,7 @@ id alertTitle
 id all
 id always
 id async
+id author
 id auto
 id barrier
 id beginning
@@ -887,6 +889,7 @@ id center
 id center_horizontal
 id center_vertical
 id chains
+id chat_list_view
 id checkbox
 id chronometer
 id clip_horizontal
@@ -950,6 +953,7 @@ id logout_button
 id masked
 id media_actions
 id message
+id message_text
 id middle
 id mini
 id multiply
@@ -960,6 +964,7 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
+id onemessage
 id packed
 id parallax
 id parent
@@ -997,6 +1002,7 @@ id search_plate
 id search_src_text
 id search_voice_btn
 id select_dialog_listview
+id send_button
 id shortcut
 id showCustom
 id showHome
@@ -1045,6 +1051,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id type_message_view
 id uniform
 id up
 id useLogo
@@ -1094,9 +1101,9 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_chat
-layout activity_chatmessage
 layout activity_main
 layout activity_register
+layout chatmessage
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1202,8 +1209,10 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
 string register
+string sample_message
 string search_menu_title
 string status_bar_notification_info_overflow
+string type_message
 string welcome
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
