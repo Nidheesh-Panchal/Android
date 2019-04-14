@@ -38,8 +38,9 @@ public class ChatActivity extends AppCompatActivity {
 		//actionBar = getSupportActionBar();
 		/*actionBar.setHomeButtonEnabled(true);
 		actionBar.setDisplayHomeAsUpEnabled(true);*/
-		SharedPreferences prefs=getSharedPreferences("chatprefs",MODE_PRIVATE);
+		SharedPreferences prefs=getSharedPreferences("chatPrefs",MODE_PRIVATE);
 		displayname=prefs.getString("username",null);
+		Log.d("connectapp","display name"+displayname);
 		if(displayname==null)
 			displayname="Anonymous";
 
