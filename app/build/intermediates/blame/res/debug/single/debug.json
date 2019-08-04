@@ -1020,12 +1020,12 @@
         "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-16.0.1.aar\\fbd605c4d5288204d1c978e07340cd99\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
-        "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
-        "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\f207989a6b325abf98bb1d2031d6bc94\\res\\layout\\notification_media_action.xml"
-    },
-    {
         "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_chat.xml.flat",
         "source": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\src\\main\\res\\layout\\activity_chat.xml"
+    },
+    {
+        "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\f207989a6b325abf98bb1d2031d6bc94\\res\\layout\\notification_media_action.xml"
     },
     {
         "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
@@ -1696,12 +1696,12 @@
         "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
-        "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_layout.xml.flat",
-        "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\27f2f15d931ab0f0cf229d392faa7132\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_layout.xml.flat",
+        "source": "C:\\Users\\nilu1\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\fc803f20f12d2e8e8ed601ea16a6a2e5\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\nilu1\\AndroidStudioProjects\\Android\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",

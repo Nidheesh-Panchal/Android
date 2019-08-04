@@ -911,6 +911,7 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id display_name
 id edit_query
 id email_text
 id end
@@ -1055,7 +1056,6 @@ id type_message_view
 id uniform
 id up
 id useLogo
-id username_text
 id view_offset_helper
 id visible
 id wide

@@ -1,15 +1,14 @@
 package com.example.android;
 
-import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -24,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 	EditText email_text;
 	EditText pass_text;
+	EditText display_name;
 	Button login_button;
 	Button register_button;
 
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
 		email_text=findViewById(R.id.email_text);
 		pass_text=findViewById(R.id.password_text);
+		display_name=findViewById(R.id.display_name);
 		login_button=findViewById(R.id.login_button);
 		register_button=findViewById(R.id.register_button);
 
@@ -77,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
 		String mail=email_text.getText().toString();
 		String password=pass_text.getText().toString();
 		Log.d("connectapp","Inside attemptLogin");
+		if(display_name.getText().toString().isEmpty())
+		{
+			Toast.makeText(this,"Your freinds will not see your username.\nPlease enter one.",Toast.LENGTH_SHORT).show();
+			return;
+		}
 		if(mail.isEmpty())
 		{
 			Toast.makeText(this,"Enter valid E-Mail!",Toast.LENGTH_SHORT).show();
@@ -87,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 			Toast.makeText(this,"Enter valid password!",Toast.LENGTH_SHORT).show();
 			return;
 		}
-
+		final String user=display_name.getText().toString();
 		Toast.makeText(this,"Login in Progress!",Toast.LENGTH_SHORT).show();
 		mAuth.signInWithEmailAndPassword(mail,password).addOnCompleteListener(this,
 				new OnCompleteListener<AuthResult>() {
@@ -97,11 +103,13 @@ public class MainActivity extends AppCompatActivity {
 
 						if (!task.isSuccessful())
 						{
-							Log.d("FlashChat", "Problem signing in: " + task.getException());
+							Log.d("connectapp", "Problem signing in: " + task.getException());
 							showErrorDialog("There was a problem signing in. \nTry Again!\nWrong email or password. OR\nCheck your internet connection");
 						}
 						else
 						{
+							SharedPreferences prefs = getSharedPreferences("chatPrefs", 0);
+							prefs.edit().putString("username", user).apply();
 							Log.d("connectapp","logged in");
 							Intent intent = new Intent(MainActivity.this, ChatActivity.class);
 							finish();

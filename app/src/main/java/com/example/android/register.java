@@ -42,7 +42,7 @@ public class register extends AppCompatActivity {
 		pass=findViewById(R.id.pass_text);
 		retypepass=findViewById(R.id.repass_text);
 		register=findViewById(R.id.register_button);
-		username=findViewById(R.id.username_text);
+		username=findViewById(R.id.display_name);
 
 		retypepass.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 			@Override
@@ -120,9 +120,8 @@ public class register extends AppCompatActivity {
 
 	private void createUser()
 	{
-		String mail=email.getText().toString();
+		final String mail=email.getText().toString();
 		String password=pass.getText().toString();
-
 		mAuth.createUserWithEmailAndPassword(mail,password).addOnCompleteListener(this,
 				new OnCompleteListener<AuthResult>() {
 			@Override

@@ -2,14 +2,13 @@ package com.example.android;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.support.v7.app.ActionBar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -24,10 +23,11 @@ public class ChatActivity extends AppCompatActivity {
 
 	//ActionBar actionBar;
 	String displayname;
-	DatabaseReference mDatabaseReference;
+	private DatabaseReference mDatabaseReference;
 	EditText input_text;
 	ListView chat_list;
 	ImageButton send_button;
+	private chatlistadapter mAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -40,9 +40,7 @@ public class ChatActivity extends AppCompatActivity {
 		actionBar.setDisplayHomeAsUpEnabled(true);*/
 		SharedPreferences prefs=getSharedPreferences("chatPrefs",MODE_PRIVATE);
 		displayname=prefs.getString("username",null);
-		Log.d("connectapp","display name"+displayname);
-		if(displayname==null)
-			displayname="Anonymous";
+		Log.d("connectapp","display name : "+displayname);
 
 		mDatabaseReference= FirebaseDatabase.getInstance().getReference();
 
@@ -65,6 +63,21 @@ public class ChatActivity extends AppCompatActivity {
 				send_message();
 			}
 		});
+	}
+
+	@Override
+	public void onStart() {
+		super.onStart();
+		mAdapter = new chatlistadapter(this, mDatabaseReference, displayname);
+		chat_list.setAdapter(mAdapter);
+	}
+
+
+	@Override
+	public void onStop() {
+		super.onStop();
+		mAdapter.cleanup();
+
 	}
 
 	private void send_message()
